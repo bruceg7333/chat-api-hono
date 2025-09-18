@@ -4,11 +4,13 @@ import { ConversationsCreate } from "@/endpoints/conversations/conversationsCrea
 import { ConversationsRead } from "@/endpoints/conversations/conversationsRead";
 import { ConversationsUpdate } from "@/endpoints/conversations/conversationsUpdate";
 import { ConversationsDelete } from "@/endpoints/conversations/conversationsDelete";
+import { ConversationsPlayground } from "@/endpoints/conversations/playground";
 
 export const conversationsRouter = new Hono();
 
-conversationsRouter.get('/', ConversationsList);
-conversationsRouter.post('/', ConversationsCreate);
-conversationsRouter.get('/:id', ConversationsRead);
-conversationsRouter.put('/:id', ConversationsUpdate);
-conversationsRouter.delete('/:id', ConversationsDelete);
+conversationsRouter.get("/", ConversationsList);
+conversationsRouter.post("/", ConversationsCreate);
+conversationsRouter.get("/:id", ConversationsRead);
+conversationsRouter.put("/:id", ConversationsUpdate);
+conversationsRouter.delete("/:id", ConversationsDelete);
+conversationsRouter.get("/playground", ConversationsPlayground);
