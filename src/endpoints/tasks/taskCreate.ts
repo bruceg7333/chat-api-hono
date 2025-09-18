@@ -1,4 +1,4 @@
-import { AppContext } from "../../types";
+import { AppContext } from "@/types";
 
 export const TaskCreate = async (c: AppContext) => {
   const body = await c.req.json();

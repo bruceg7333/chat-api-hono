@@ -1,4 +1,4 @@
-import { AppContext } from "../../types";
+import { AppContext } from "@/types";
 
 export const TaskDelete = async (c: AppContext) => {
   const id = c.req.param("id");

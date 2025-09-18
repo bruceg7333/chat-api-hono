@@ -1,4 +1,4 @@
-import { AppContext } from "../../types";
+import { AppContext } from "@/types";
 
 export const TaskList = async (c: AppContext) => {
   return c.json({

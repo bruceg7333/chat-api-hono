@@ -1,5 +1,5 @@
-import { AppContext } from "../../types";
-import { getSupabaseClient } from "../../lib/supabase";
+import { AppContext } from "@/types";
+import { getSupabaseClient } from "@/lib/supabase";
 
 export const ConversationsRead = async (c: AppContext) => {
   const supabase = getSupabaseClient(c);

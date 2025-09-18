@@ -1,7 +1,6 @@
 import { Hono } from "hono";
-import { tasksRouter } from "./endpoints/tasks/router";
-import { conversationsRouter } from "./endpoints/conversations/router";
-import { DummyEndpoint } from "./endpoints/dummyEndpoint";
+import { tasksRouter } from "@/endpoints/tasks/router";
+import { conversationsRouter } from "@/endpoints/conversations/router";
 
 // Start a Hono app
 const app = new Hono<{ Bindings: Env }>();
@@ -24,9 +23,6 @@ app.route("/tasks", tasksRouter);
 
 // Register Conversations Sub router
 app.route("/conversations", conversationsRouter);
-
-// Register other endpoints
-app.post("/dummy/:slug", DummyEndpoint);
 
 // Export the Hono app
 export default app;
