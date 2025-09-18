@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "chat-api-hono",
+  "upload_source_maps": true,
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "chat-hono-d1",
+      "database_id": "ef068b54-c897-44bf-a555-8c48f0a6be4c"
+    }
+  ]
+}
