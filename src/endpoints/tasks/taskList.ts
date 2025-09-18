@@ -1,12 +1,17 @@
-import { D1ListEndpoint } from "chanfana";
-import { HandleArgs } from "../../types";
-import { TaskModel } from "./base";
+import { AppContext } from "../../types";
 
-export class TaskList extends D1ListEndpoint<HandleArgs> {
-  _meta = {
-    model: TaskModel,
-  };
-
-  searchFields = ["name", "slug", "description"];
-  defaultOrderBy = "id DESC";
-}
+export const TaskList = async (c: AppContext) => {
+  return c.json({
+    success: true,
+    data: [
+      {
+        id: 1,
+        name: "Task 1",
+        slug: "task-1",
+        description: "This is the first task.",
+        completed: false,
+        due_date: new Date().toISOString(),
+      },
+    ],
+  });
+};

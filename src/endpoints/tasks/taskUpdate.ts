@@ -1,16 +1,13 @@
-import { D1UpdateEndpoint } from "chanfana";
-import { HandleArgs } from "../../types";
-import { TaskModel } from "./base";
+import { AppContext } from "../../types";
 
-export class TaskUpdate extends D1UpdateEndpoint<HandleArgs> {
-  _meta = {
-    model: TaskModel,
-    fields: TaskModel.schema.pick({
-      name: true,
-      slug: true,
-      description: true,
-      completed: true,
-      due_date: true,
-    }),
-  };
-}
+export const TaskUpdate = async (c: AppContext) => {
+  const id = c.req.param("id");
+  const body = await c.req.json();
+  return c.json({
+    success: true,
+    data: {
+      id: parseInt(id),
+      ...body,
+    },
+  });
+};

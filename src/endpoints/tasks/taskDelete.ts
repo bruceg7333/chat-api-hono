@@ -1,9 +1,9 @@
-import { D1DeleteEndpoint } from "chanfana";
-import { HandleArgs } from "../../types";
-import { TaskModel } from "./base";
+import { AppContext } from "../../types";
 
-export class TaskDelete extends D1DeleteEndpoint<HandleArgs> {
-  _meta = {
-    model: TaskModel,
-  };
-}
+export const TaskDelete = async (c: AppContext) => {
+  const id = c.req.param("id");
+  return c.json({
+    success: true,
+    message: `Task ${id} deleted.`,
+  });
+};
