@@ -1,5 +1,5 @@
 node_modules
 .env
 .wrangler
-wrangler.toml
+wrangler.jsonc
 .dev.vars
