@@ -16,7 +16,7 @@
   },
   "routes": [
     {
-      "pattern": "api.kacoka.asia",
+      "pattern": "api2.kacoka.asia",
       "custom_domain": true
     }
   ]
