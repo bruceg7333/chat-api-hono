@@ -1,10 +1,6 @@
 # Hono API Template
-
 This is a Cloudflare Worker with [Hono](https://github.com/honojs/hono).
 
-This is an example project made to be used as a quick start into building APIs with Hono on Cloudflare Workers.
-
-This template includes a `/tasks` and `/conversations` endpoint.
 
 ## Getting Started
 
@@ -28,6 +24,12 @@ npm create cloudflare@latest -- --template=cloudflare/templates/hono-template
    ```bash
    npx wrangler tail
    ```
+
+## local development
+
+```bash
+pnpm dev
+```
 
 ## Project structure
 

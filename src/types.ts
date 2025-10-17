@@ -4,6 +4,7 @@ export type Env = {
   SUPABASE_ANON_KEY: any;
   SUPABASE_URL: string;
   JWT_SECRET: string;
+  GOOGLE_API_KEY: string;
 };
 
 export type AppContext = Context<{ Bindings: Env }>;
