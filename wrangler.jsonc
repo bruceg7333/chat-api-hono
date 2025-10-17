@@ -13,5 +13,11 @@
       "persist": true,
       "invocation_logs": true
     }
-  }
+  },
+  "routes": [
+    {
+      "pattern": "api.kacoka.asia",
+      "custom_domain": true
+    }
+  ]
 }
